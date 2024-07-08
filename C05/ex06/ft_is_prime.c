@@ -1,46 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_is_prime.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ien-niou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/03 11:41:27 by ien-niou          #+#    #+#             */
-/*   Updated: 2024/07/03 12:08:39 by ien-niou         ###   ########.fr       */
+/*   Created: 2024/07/07 13:14:26 by ien-niou          #+#    #+#             */
+/*   Updated: 2024/07/07 13:14:29 by ien-niou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlen(char *s)
+int	ft_is_prime(int nb)
 {
 	int		i;
 
-	i = 0 ;
-	while (s[i])
-		i++;
-	return (i);
-}
-
-{
-	unsigned int	s;
-	unsigned int	d;
-	unsigned int	i;
-	unsigned int	res;
-
-	s = ft_strlen(src);
-	d = ft_strlen(dest);
-	i = 0;
-	res = 0 ;
-	if (size > d)
-		res = (d + s);
-	else
-		res = (s + size);
-	if (size == 0)
-		return (res);
-	while (src[i] && (d + i) < size - 1)
+	i = 2 ;
+	if (nb <= 1)
+		return (0);
+	while (i < nb)
 	{
-		dest[d + i] = src[i];
+		if (nb % i == 0)
+			return (0);
 		i++;
 	}
-	dest[d + i] = '\0' ;
-	return (res);
+	return (1);
 }
