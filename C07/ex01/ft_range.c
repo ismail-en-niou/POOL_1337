@@ -6,7 +6,7 @@
 /*   By: ien-niou <ien-niou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 12:01:49 by ien-niou          #+#    #+#             */
-/*   Updated: 2024/07/09 12:03:15 by ien-niou         ###   ########.fr       */
+/*   Updated: 2024/07/14 17:50:07 by ien-niou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,7 @@ int	*ft_range(int min, int max)
 	i = 0;
 	while (min < max)
 	{
-		ints[i] = min;
-		min++;
-		i++;
+		ints[i++] = min++;
 	}
 	return (ints);
 }
